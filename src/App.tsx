@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import './assets/styles/main.scss'
 import { UseCallbackPage, UseEffectPage, UseMemoPage, ReactContextPage } from './components';
+import { CounterProvider } from './context/ContextProvider';
 
 function App() {
   return (
@@ -19,12 +20,14 @@ function App() {
         </header>
 
         <main>
-            <Routes>
-              <Route path="/" Component={UseEffectPage} />
-              <Route path="/use-memo" Component={UseMemoPage} />
-              <Route path="/use-callback" Component={UseCallbackPage} />
-              <Route path="/context" Component={ReactContextPage} />
-            </Routes>
+            <CounterProvider>
+              <Routes>
+                <Route path="/" Component={UseEffectPage} />
+                <Route path="/use-memo" Component={UseMemoPage} />
+                <Route path="/use-callback" Component={UseCallbackPage} />
+                  <Route path="/context" Component={ReactContextPage} />
+              </Routes>
+            </CounterProvider>
         </main>
 
         <footer>
