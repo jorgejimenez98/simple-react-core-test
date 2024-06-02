@@ -12,12 +12,25 @@ body {
         header {
             min-height: $header-heigth;
             background-color: $secondary;
-            padding: 0 20px 0 20px;
             display: flex;
             align-items: center;
             position: sticky;
             top: 0;
             box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.2);
+
+            nav {
+                width: 100%;
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    li {
+                        list-style: none;
+                        font-size: 16px;
+                    }
+                }
+            }
         }
 
         // Main Layout structure
@@ -29,10 +42,15 @@ body {
             height: 100%;
             margin-top: 2rem;
             margin-bottom: 3rem;
+
+            display: flex;
+            justify-content: center;
         }
 
         footer {
             margin-top: auto;
+            display: flex;
+            justify-content: center;
         }
     }
 }
